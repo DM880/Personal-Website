@@ -118,6 +118,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -128,7 +130,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
@@ -139,11 +141,3 @@ EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_HOST = "denys.mauro@gmail.com"
-
-# EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-# SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
-
-# SENDGRID_SANDBOX_MODE_IN_DEBUG=True
-
-# # echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
-# SENDGRID_ECHO_TO_STDOUT=True
