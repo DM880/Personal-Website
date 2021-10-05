@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*p!$&$e7fuk^tha0cvund3qdd2_l3+c*!&cv4p0lmv&4)*1-4@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ide-d552d84f01fc444aacb387647fc6cca7-8080.cs50.ws']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -140,7 +140,6 @@ EMAIL_HOST = "denys.mauro@gmail.com"
 
 # EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 # SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
-# os.environ.get('SENDGRID_API_KEY')
 
 # SENDGRID_SANDBOX_MODE_IN_DEBUG=True
 
