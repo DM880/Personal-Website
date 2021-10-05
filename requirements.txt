@@ -73,7 +73,6 @@ html5lib==1.1
 hyperlink==21.0.0
 icdiff==2.0.4
 idna==3.2
-ikp3db==1.4.5
 incremental==21.3.0
 Inflector==2.0.12
 intervaltree==2.1.0
