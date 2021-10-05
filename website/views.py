@@ -5,6 +5,7 @@ from django.core.validators import validate_email
 from django.http import HttpResponse
 from .models import *
 from django.conf import settings
+import sendgrid
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import os
@@ -26,24 +27,9 @@ def index(request):
         else:
             ContactDetail.objects.create(name=name,email=email,text=text)
 
-            # subject = "Thank you for reaching out!"
-
-            # body = {
-            #     'name':name,
-            #     'email':email,
-            #     'text':text
-            # }
-
-            # message = "Thank you for reaching out!I will do my best to get in contact with you as soon as possible"
-
-            # try:
-            #     send_mail(subject, message, "my@email.com", [email])
-            # except BadHeaderError:
-            #     return HttpResponse("Not valid")
-
             message = Mail(
                 from_email= settings.EMAIL_HOST,
-                to_emails=email,
+                to_emails= email,
                 subject='Thank you for reaching out!',
                 html_content='<strong>Thank you for reaching out!I will do my best to get in contact with you as soon as possible</strong>')
             try:
