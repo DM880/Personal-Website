@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Latest Projects</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+  <link rel="stylesheet" href="{% static 'css/base_project.css' %}">
+
+</head>
+<body>
+<a href="{% url 'website:index' %}"><button type="button" class="nav">⇦</button></a>
+
+  {% for project in all_projects %}
+  {% if forloop.counter0|divisibleby:2 %}
+  <div class="container-wrap">
+  <div class="img-cont">
+  <img src="{{ STATIC_PREFIX }}img/{{ project.image }}" onerror="this.style.display='none';"></div>
+  <div class="proj-d">
+    <h2 class="proj-title">{{project.name}}</h2>
+    <p>{{ project.description }}</p>
+    <div class="icon-cont">
+  <ul>
+      <li><a href="{{ project.github_url }}" id="links"><i class="fab fa-github"></i></a></li>
+      <li><a href="{{ project.live_url }}" id="links"><i class="fas fa-code"></i></a></li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  {% else %}
+    <div class="container-wrap">
+  <div class="proj-d-odd">
+    <h2 class="proj-title">{{project.name}}</h2>
+    <p>{{ project.description }}</p>
+    <div class="icon-cont-odd">
+  <ul>
+      <li><a href="{{ project.github_url }}" id="links"><i class="fab fa-github"></i></a></li>
+      <li><a href="{{ project.live_url }}" id="links"><i class="fas fa-code"></i></a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="img-cont-odd">
+  <img src="{{ STATIC_PREFIX }}img/{{ project.image }}" onerror="this.style.display='none';"></div>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://unpkg.com/delaunator@2.0.0/delaunator.min.js'></script><script  src="{% static 'js/base_project.js' %}"></script>
+</body>
+</html>

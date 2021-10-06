@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.http import HttpResponse
 from .models import *
+from projects.views import *
 from django.conf import settings
 import sendgrid
 from sendgrid import SendGridAPIClient
@@ -44,7 +45,3 @@ def index(request):
             return redirect('website:index')
 
     return render(request, "index.html")
-
-
-def comingsoon(request):
-    return render(request, "comingsoon.html")

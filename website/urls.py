@@ -5,5 +5,4 @@ app_name = "website"
 
 urlpatterns = [
                 path('', index, name="index"),
-                path('comingsoon/', comingsoon, name="comingsoon"),
             ]
