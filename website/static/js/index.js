@@ -50,7 +50,7 @@ window.onload = function() {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
-  
+
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
@@ -75,11 +75,19 @@ TweenMax.from("#pro", 1, {opacity: 0, x: -30, delay: 1.5});
 // ScrollReveal().reveal('p', {delay: 500});
 
 
-//open link in tab
-$(document).on('click', '#links', function(e){ 
-    e.preventDefault(); 
-    var url = $(this).attr('href'); 
+//open link in new tab
+$(document).on('click', '#links', function(e){
+    e.preventDefault();
+    var url = $(this).attr('href');
     window.open(url, '_blank');
+});
+
+
+//open is same tab for projects
+$(document).on('click', '#proj-link', function(e){
+    e.preventDefault();
+    var url = $(this).attr('href');
+    window.open(url,'_self');
 });
 
 // nav change color scroll
@@ -104,12 +112,12 @@ $(function () {
   });
 });
 
-$(document).ready(function(){       
+$(document).ready(function(){
         var scroll_pos = 0;
-        $(document).scroll(function() { 
+        $(document).scroll(function() {
             scroll_pos = $(this).scrollTop();
             if(scroll_pos > 100) {
-                $('.men-a').css('color', '#F23D4C');             
+                $('.men-a').css('color', '#F23D4C');
             } else {
                 $('.men-a').css('color', '#fff');
             }
