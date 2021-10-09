@@ -5,7 +5,7 @@ from django.db import models
 class ProjectDetail(models.Model):
 
     name = models.CharField(max_length=50)
-    image = models.ImageField(blank=True, upload_to='img/')
+    image = models.ImageField(blank=True, upload_to='projects/static/img/')
     description = models.TextField(max_length=100)
     github_url = models.URLField(max_length=200)
     live_url = models.URLField(max_length=200, blank=True)

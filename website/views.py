@@ -32,7 +32,7 @@ def index(request):
                 from_email= settings.EMAIL_HOST,
                 to_emails= email,
                 subject='Thank you for reaching out!',
-                html_content='<strong>Thank you for reaching out!I will do my best to get in contact with you as soon as possible</strong>')
+                html_content='<strong>Thank you for reaching out! I will do my best to get in contact with you as soon as possible.</strong>')
             try:
                 sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
                 response = sg.send(message)
@@ -40,7 +40,7 @@ def index(request):
                 print(response.body)
                 print(response.headers)
             except Exception as e:
-                print(e.message)
+                print(e.body)
 
             return redirect('website:index')
 
