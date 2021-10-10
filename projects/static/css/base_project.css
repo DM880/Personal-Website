@@ -44,9 +44,15 @@ a, button{
   width: 40%;
   height: 100%;
   flex-grow: 1;
+  border: solid 2px black;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   overflow: hidden;
+}
+
+img{
+   width:100%;
+   height:100%;
 }
 
 .proj-d{
@@ -54,6 +60,7 @@ a, button{
   height: 100%;
   background-color: white;
   flex-grow: 1;
+  border: solid 2px black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
@@ -122,6 +129,7 @@ body:last-child{
   width: 40%;
   height: 100%;
   flex-grow: 1;
+  border: solid 2px black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
@@ -132,6 +140,7 @@ body:last-child{
   height: 100%;
   background-color: white;
   flex-grow: 1;
+  border: solid 2px black;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   position: relative;

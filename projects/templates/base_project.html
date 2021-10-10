@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<a href="{% url 'website:index' %}"><button type="button" class="nav">⇦</button></a>
+<a href="{% url 'website:index' %}"><button title="Back to Main Page" type="button" class="nav">⇦</button></a>
 
   {% for project in all_projects %}
   {% if forloop.counter0|divisibleby:2 %}
