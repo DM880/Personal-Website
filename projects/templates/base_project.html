@@ -5,6 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Latest Projects</title>
+  <link rel="shortcut icon" sizes="60x60" type="image/png" src="/media/favicon.ico">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
   <link rel="stylesheet" href="{% static 'css/base_project.css' %}">
 
@@ -23,7 +24,7 @@
     <div class="icon-cont">
   <ul>
       <li><a href="{{ project.github_url }}" id="links"><i class="fab fa-github"></i></a></li>
-      <li><a href="{{ project.live_url }}" id="links"><i class="fas fa-code"></i></a></li>
+      <li><a href="{{ project.live_url }}" id="links"><i class="fas fa-code" {% if not project.live_url %}title="No live code sorry!"{% endif %}></i></a></li>
     </ul>
   </div>
   </div>
@@ -36,7 +37,7 @@
     <div class="icon-cont-odd">
   <ul>
       <li><a href="{{ project.github_url }}" id="links"><i class="fab fa-github"></i></a></li>
-      <li><a href="{{ project.live_url }}" id="links"><i class="fas fa-code"></i></a></li>
+      <li><a href="{{ project.live_url }}" id="links"><i class="fas fa-code" {% if not project.live_url %}title="No live code sorry!"{% endif %}></i></a></li>
     </ul>
   </div>
   </div>
