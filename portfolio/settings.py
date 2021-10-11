@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -143,3 +144,7 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_HOST = config("EMAIL_HOST")
+
+
+#  Add configuration for static files storage using whitenoise
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
