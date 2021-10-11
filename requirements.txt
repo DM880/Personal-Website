@@ -26,5 +26,8 @@ Django == 3.2
 # portfolio/portfolio/settings.py: 15
 python_decouple == 3.4
 
+# portfolio/portfolio/settings.py: 17
+python_dotenv == 0.19.1
+
 # portfolio/website/views.py: 9,10,11
 sendgrid == 6.8.2
