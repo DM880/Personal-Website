@@ -43,8 +43,7 @@ a, button{
   background-color: white;
   width: 40%;
   height: 100%;
-  flex-grow: 1;
-  border: solid 2px black;
+  border: solid 1px black;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   overflow: hidden;
@@ -59,11 +58,11 @@ img{
   width: 60%;
   height: 100%;
   background-color: white;
-  flex-grow: 1;
-  border: solid 2px black;
+  border: solid 1px black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: relative;
+  border-left: none;
 }
 
 .proj-title{
@@ -129,10 +128,11 @@ body:last-child{
   width: 40%;
   height: 100%;
   flex-grow: 1;
-  border: solid 2px black;
+  border: solid 1px black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
+  border-left: none;
 }
 
 .proj-d-odd{
@@ -140,7 +140,7 @@ body:last-child{
   height: 100%;
   background-color: white;
   flex-grow: 1;
-  border: solid 2px black;
+  border: solid 1px black;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   position: relative;
@@ -154,4 +154,55 @@ body:last-child{
   position: absolute;
   width:100%;
   border-bottom-left-radius: 15px;
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width:950px){
+  .container-wrap{
+    flex-direction: column;
+    positon:relative;
+    padding-bottom: 400px;
+  }
+
+  .img-cont{
+    width:100%;
+    min-height: 300px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+  }
+  .proj-d{
+    width: 100%;
+    min-height: 300px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border: solid 1px black;
+    border-top: none;
+    overflow:hidden;
+  }
+  .proj-title{
+    font-size: 20px;
+  }
+
+  .fa-code{
+    font-size: 1.5em;
+  }
+
+  .fa-github{
+    font-size: 2em;
+  }
+
+  .odd-img{
+    position: absolute;
+    max-height:300px;
+    max-width: 70%;
+  }
+  .odd{
+    margin-top:300px;
+    border: solid 1px black;
+    overflow:hidden;
+  }
+
 }

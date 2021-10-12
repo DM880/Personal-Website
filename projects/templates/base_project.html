@@ -30,8 +30,8 @@
   </div>
   </div>
   {% else %}
-    <div class="container-wrap">
-  <div class="proj-d-odd">
+    <div class="container-wrap cont-odd">
+  <div class="proj-d-odd odd">
     <h2 class="proj-title">{{project.name}}</h2>
     <p>{{ project.description }}</p>
     <div class="icon-cont-odd">
@@ -41,7 +41,7 @@
     </ul>
   </div>
   </div>
-  <div class="img-cont-odd">
+  <div class="img-cont-odd odd-img">
   <img src="/media/{{ project.image }}" onerror="this.style.display='none';"></div>
   </div>
   {% endif %}
