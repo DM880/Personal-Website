@@ -20,6 +20,7 @@ a, button{
   bottom: 10px;
   left: 10px;
   transition: .4s ease-out;
+  z-index: 3;
 }
 
 .nav:hover{
@@ -68,6 +69,8 @@ img{
 .proj-title{
   text-align: center;
   font-size: 30px;
+  color: #F23D4C;
+  font-family: 'Roboto', sans-serif;
 }
 
 p{
@@ -75,6 +78,8 @@ p{
   font-size: 20px;
   word-wrap: break-word;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #0D0D0D;
 }
 
 ul{
@@ -203,6 +208,18 @@ body:last-child{
     margin-top:300px;
     border: solid 1px black;
     overflow:hidden;
+  }
+
+}
+
+
+@media screen and (max-width:380px){
+  p{
+    padding-top: 0;
+    font-size: 17px;
+  }
+  .fa-code{
+    padding-right:20px;
   }
 
 }
